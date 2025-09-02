@@ -1,0 +1,28 @@
+script.js
+let selectedBox = null;
+const prizes = [
+  "🎉 Free Data Bundle!",
+  "💵 Cashback Reward!",
+  "🎁 Surprise Gift!",
+  "🔥 Airtime Bonus!",
+  "⭐ VIP Access!",
+  "🍔 Free Meal Voucher!",
+  "🎶 Music Pass!"
+];
+
+function selectBox(num) {
+  selectedBox = num;
+  document.getElementById("payment").classList.remove("hidden");
+  document.getElementById("result").classList.add("hidden");
+}
+
+function confirmPayment() {
+  if (!selectedBox) {
+    alert("Please select a box first!");
+    return;
+  }
+  const prize = prizes[selectedBox - 1];
+  document.getElementById("result").innerText = `You opened Box ${selectedBox} and won: ${prize}`;
+  document.getElementById("result").classList.remove("hidden");
+  document.getElementById("payment").classList.add("hidden");
+}
