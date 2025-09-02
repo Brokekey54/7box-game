@@ -1,0 +1,33 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7 Box Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Pick a Box 🎁</h1>
+    <p>Select one of the 7 boxes and pay Ksh 50 to reveal your reward.</p>
+    <div class="boxes">
+      <button class="box" onclick="selectBox(1)">Box 1</button>
+      <button class="box" onclick="selectBox(2)">Box 2</button>
+      <button class="box" onclick="selectBox(3)">Box 3</button>
+      <button class="box" onclick="selectBox(4)">Box 4</button>
+      <button class="box" onclick="selectBox(5)">Box 5</button>
+      <button class="box" onclick="selectBox(6)">Box 6</button>
+      <button class="box" onclick="selectBox(7)">Box 7</button>
+    </div>
+    <div id="payment" class="hidden">
+      <h2>Payment</h2>
+      <p>Send <b>Ksh 50</b> to Airtel number: <b>0731010224</b></p>
+      <button onclick="confirmPayment()">I’ve Paid</button>
+    </div>
+    <div id="result" class="hidden"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
